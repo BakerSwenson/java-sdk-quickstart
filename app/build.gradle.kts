@@ -8,6 +8,8 @@ repositories {
 
 dependencies {
     testImplementation(libs.junit.jupiter)
+    testImplementation(libs.kafka.tests)
+    testImplementation(libs.responsive.tests)
 
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 
@@ -25,7 +27,7 @@ java {
 }
 
 application {
-    mainClass = "dev.responsive.quickstart.WordCount"
+    mainClass = "dev.responsive.quickstart.WordCountSpringBoot"
 }
 
 tasks.named<Test>("test") {
